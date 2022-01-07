@@ -10,11 +10,6 @@ RUN apt update -y \
 	&& mkdir -p /run/screen \
 	&& chmod -R 777 /run/screen \
 	&& chmod +x /configure.sh \
-	&& chmod +x /bin/aria2c \
-	&& chmod +x /bin/rclone \
-	&& chmod +x /bin/frpc \
-	&& chmod +x /bin/ttyd \
-	&& chmod +x /bin/upx \
 	&& rm -rf /etc/nginx/nginx.conf \
 	&& mkdir -p /var/www/html/ttyd
 COPY static-html /var/www/html	

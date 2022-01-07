@@ -18,7 +18,7 @@
             "value": "73e6170f-753f-40ea-8fb8-f5f71d456271"
         },
         "CERT": {
-            "description": "XRAY uuid",
+            "description": "cf 证书",
             "value": ""
         },
         "cfhost": {

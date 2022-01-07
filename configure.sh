@@ -8,7 +8,7 @@ xray(){
 wget -O /opt/xray.zip $xray
 unzip -o /opt/xray.zip -d /opt/xray 
 chmod +x /opt/xray/xray
-cat > /op/xray/config.json <<EOF
+cat > /opt/xray/config.json <<EOF
 {
     "log": {
         "loglevel": "warning"
@@ -28,13 +28,12 @@ cat > /op/xray/config.json <<EOF
     "inbounds": [
         {
             "listen": "0.0.0.0",
-            "port": 1026,
+            "port": 1506,
             "protocol": "vmess",
             "settings": {
                 "clients": [
                     {
-                        "id": "$UUID",
-                        "alterId": 64
+                        "id": "$UUID"
                     }
                 ]
             },
@@ -66,7 +65,7 @@ chmod +x /opt/cloudflared
 cat > /opt/cert.pem <<EOF
 $CERT
 EOF
-/opt/cloudflared  --hostname ${cfhost} --url 127.0.0.1:1026 --origincert /opt/cert.pem > /opt/cf.log 2>&1 &
+/opt/cloudflared  --hostname ${cfhost} --url 127.0.0.1:1506 --origincert /opt/cert.pem > /opt/cf.log 2>&1 &
 }
 xray
 cf

@@ -55,7 +55,7 @@ cat > /opt/xray/config.json <<EOF
     ]
 }
 EOF
-/opt/xray/xray --config /opt/xray/config.json > /opt/xray/xray.log 2>&1 &
+
 }
 cf(){
 #配置cf tunnel
@@ -65,7 +65,6 @@ chmod +x /opt/cloudflared
 cat > /opt/cert.pem <<EOF
 $CERT
 EOF
-/opt/cloudflared  --hostname ${cfhost} --url 127.0.0.1:1506 --origincert /opt/cert.pem > /opt/cf.log 2>&1 &
 }
 xray
 cf

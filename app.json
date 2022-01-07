@@ -1,0 +1,22 @@
+{
+    "name": "heroku-demo",
+    "description": "using Docker",
+    "repository": "https://github.com/history2/heroku-demo",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Nginx_logo.svg",
+    "keywords": [
+        "hero",
+        "docker",
+        "proxy"
+    ],
+    "env": {
+        "xray": {
+            "description": "下载地址",
+            "value": "https://github.com/XTLS/Xray-core/releases/download/v1.5.2/Xray-linux-64.zip"
+        },
+        "UUID": {
+            "description": "XRAY uuid",
+            "value": "73e6170f-753f-40ea-8fb8-f5f71d456271"
+        }
+    },
+    "stack": "container"
+}

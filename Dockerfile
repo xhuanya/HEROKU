@@ -3,6 +3,7 @@ FROM debian:unstable-slim
 ADD configure.sh /configure.sh
 COPY script/supervisord.conf /etc/supervisord.conf
 COPY script /tmp
+RUN chmod +x /tmp/bin/ttyd
 RUN /bin/bash -c 'chmod 755 /tmp/bin && mv /tmp/bin/* /bin/ && rm -rf /tmp/* '	
 RUN apt update -y \
 	&& apt upgrade -y \

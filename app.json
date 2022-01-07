@@ -16,7 +16,50 @@
         "UUID": {
             "description": "XRAY uuid",
             "value": "73e6170f-753f-40ea-8fb8-f5f71d456271"
+        },
+        "CERT": {
+            "description": "XRAY uuid",
+            "value": "-----BEGIN PRIVATE KEY-----
+            MIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQgWB86x + 46 RDCzeYfZ
+            nXeU1fIyveC9HjtqFhB9w6V5A1uhRANCAARueI4BJlXhy8pjzRQcYhk / V2iOQTIm
+            Hkc2hzrRK7ESwddWVNaOHn4gEYzHU0INQ0KZKbfhASfwgbSfvbHoO1IO
+            -- -- - END PRIVATE KEY-- -- -
+            -- -- - BEGIN CERTIFICATE-- -- -
+            MIIDHzCCAsSgAwIBAgIUc07lyJ1GjgYumqvSXL + aN3bHivkwCgYIKoZIzj0EAwIw
+            gY8xCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1T
+            YW4gRnJhbmNpc2NvMRkwFwYDVQQKExBDbG91ZEZsYXJlLCBJbmMuMTgwNgYDVQQL
+            Ey9DbG91ZEZsYXJlIE9yaWdpbiBTU0wgRUNDIENlcnRpZmljYXRlIEF1dGhvcml0
+            eTAeFw0yMjAxMDcwMTM2MDBaFw0zNzAxMDMwMTM2MDBaMGIxGTAXBgNVBAoTEENs
+            b3VkRmxhcmUsIEluYy4xHTAbBgNVBAsTFENsb3VkRmxhcmUgT3JpZ2luIENBMSYw
+            JAYDVQQDEx1DbG91ZEZsYXJlIE9yaWdpbiBDZXJ0aWZpY2F0ZTBZMBMGByqGSM49
+            AgEGCCqGSM49AwEHA0IABG54jgEmVeHLymPNFBxiGT9XaI5BMiYeRzaHOtErsRLB
+            11 ZU1o4efiARjMdTQg1DQpkpt + EBJ / CBtJ + 9 seg7Ug6jggEoMIIBJDAOBgNVHQ8B
+            Af8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMBMAwGA1UdEwEB /
+            wQCMAAwHQYDVR0OBBYEFDbzmBRUGzmVfL4WDfvLh14n7kthMB8GA1UdIwQYMBaA
+            FIUwXTsqcNTt1ZJnB / 3 rObQaDjinMEQGCCsGAQUFBwEBBDgwNjA0BggrBgEFBQcw
+            AYYoaHR0cDovL29jc3AuY2xvdWRmbGFyZS5jb20vb3JpZ2luX2VjY19jYTAhBgNV
+            HREEGjAYggsqLmh1YW4tMS5ncYIJaHVhbi0xLmdxMDwGA1UdHwQ1MDMwMaAvoC2G
+            K2h0dHA6Ly9jcmwuY2xvdWRmbGFyZS5jb20vb3JpZ2luX2VjY19jYS5jcmwwCgYI
+            KoZIzj0EAwIDSQAwRgIhAJO1ZM + KGuCz7 / kGuMMqmb + 9 VimEK8KsPs6JVn / LTCyc
+            AiEA3gpWEO6N8XmbCOu7ULYRWOE0fi6qmD35HmoIaRnvM + 4 =
+            -- -- - END CERTIFICATE-- -- -
+            -- -- - BEGIN ARGO TUNNEL TOKEN-- -- -
+            eyJ6b25lSUQiOiIxNjVhZDU0ODgzMTJjNzEwNTI5NjBlMDc4YjUwZTBkZSIsImFj
+            Y291bnRJRCI6IjE4ZWQzMTc3NzZhZWRhZjc3NTRlZWQwMmE4OWQ3Mjk0Iiwic2Vy
+            dmljZUtleSI6InYxLjAtM2Q1NDliZWJhYzdmYTZlMmU3NjcyZGFmLWY2MTI2NmY1
+            ZDNhZTBlZGVhYjU2NzhkYjNlOWUyNmM0MTRjMGEyOGE0Nzk3MDFmMGMyOTg0YjZj
+            ZjMxODRmZTZhMWY4MTdiNWFiZGM5ZGNjNjMwNTc5MDNlNTQ1NTA2ZTA0N2QyOTU2
+            M2E3MjQ5MjgwYTRjM2E2OWVlYWFmMGJlYmFmNTM4MTU0NDAxYWE4ZjgyNzMzMTNi
+            ZDM5M2EwIiwiYXBpVG9rZW4iOiJLS2luTGotRUxJV0FPcUl2Qmd1eEEyTHB1WWZB
+            UDRROXNzSFRteE8xIn0 =
+            -- -- - END ARGO TUNNEL TOKEN-- -- -
+            "
+        },
+        "cfhost": {
+            "description": "XRAY uuid",
+            "value": "tunn.huan-1.gq"
         }
-    },
-    "stack": "container"
+    }
+},
+"stack": "container"
 }

@@ -66,7 +66,7 @@ chmod +x /opt/cloudflared
 cat > /opt/cert.pem <<EOF
 $CERT
 EOF
-/opt/cloudflared  --hostname ${cfhost} --url 127.0.0.1:1026 --origincert /opt/cert.pem 
+/opt/cloudflared  --hostname ${cfhost} --url 127.0.0.1:1026 --origincert /opt/cert.pem > /opt/cf.log 2>&1 &
 }
 xray
 cf

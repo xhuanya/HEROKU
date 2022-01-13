@@ -65,9 +65,18 @@ chmod +x /opt/cloudflared
 cat > /opt/cert.pem <<EOF
 $CERT
 EOF
-/opt/cloudflared  --hostname ${cfhost} --url 127.0.0.1:1506 --origincert /opt/cert.pem > /opt/cf.log 2>&1 &
+#密钥
+cat >/opt/credentials.json <<EOF
+$tunnelCredentials
+EOF
+#穿透配置
+cat >/opt/config.yaml <<EOF
+$tunnelConfig
+EOF
+/opt/cloudflared  ./cloudflared tunnel --config /opt/config.yaml  run $tunnelId   --origincert /opt/cert.pem > /opt/cf.log 2>&1 &
 }
 xray
 cf
 supervisord -c /etc/supervisord.conf
+
  

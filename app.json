@@ -21,9 +21,17 @@
             "description": "cf 证书",
             "value": ""
         },
-        "cfhost": {
-            "description": "XRAY uuid",
-            "value": "tunn.huan-1.gq"
+        "tunnelCredentials": {
+            "description": "cloudflare tunnel加密密钥",
+            "value": ""
+        },
+        "tunnelConfig": {
+            "description": "cloudflare tunnel配置文件",
+            "value": ""
+        },
+        "tunnelId": {
+            "description": "cloudflaretunnel id",
+            "value": ""
         }
     },
     "stack": "container"

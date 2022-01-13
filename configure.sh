@@ -73,7 +73,8 @@ EOF
 cat >/opt/config.yaml <<EOF
 $tunnelConfig
 EOF
-/opt/cloudflared  ./cloudflared tunnel --config /opt/config.yaml  run $tunnelId   --origincert /opt/cert.pem > /opt/cf.log 2>&1 &
+/opt/cloudflared --origincert /opt/cert.pem   tunnel --config /opt/config.yaml  run $tunnelId > /opt/cf.log 2>&1 &
+
 }
 xray
 cf

@@ -1,0 +1,11 @@
+tunnel: be397372-ede2-4f6e-b746-afd64b690bbf
+credentials-file: $PATH
+
+ingress:
+  # Example of a request over TCP:
+  - hostname: kong2.huan-1.gq
+    service: 127.0.0.1:8000
+  - hostname: test.example.com
+    service: hello_world
+  # Example of a rule responding to traffic with an HTTP status:
+  - service: http_status:404

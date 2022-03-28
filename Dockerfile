@@ -1,4 +1,4 @@
-FROM debian:unstable-slim
+FROM debian:bullseye-slim
 
 ADD configure.sh /configure.sh
 COPY script/supervisord.conf /etc/supervisord.conf
@@ -13,6 +13,12 @@ RUN apt update -y \
 	&& chmod +x /configure.sh \
 	&& rm -rf /etc/nginx/nginx.conf \
 	&& mkdir -p /var/www/html/ttyd
+	
+RUN curl https://pkg.cloudflareclient.com/pubkey.gpg | sudo gpg --yes --dearmor --output /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg
+RUN echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflareclient.com/ bullseye main' | sudo tee /etc/apt/sources.list.d/cloudflare-client.list
+RUN apt update -y
+RUN apt install cloudflare-warp -y
+
 COPY static-html /var/www/html	
 COPY nginx.conf /etc/nginx/nginx.conf
 ADD default.conf /etc/nginx/conf.d/default.conf

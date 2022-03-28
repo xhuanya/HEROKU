@@ -14,10 +14,8 @@ RUN apt update -y \
 	&& rm -rf /etc/nginx/nginx.conf \
 	&& mkdir -p /var/www/html/ttyd
 	
-RUN curl https://pkg.cloudflareclient.com/pubkey.gpg | sudo gpg --yes --dearmor --output /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg
-RUN echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflareclient.com/ bullseye main' | sudo tee /etc/apt/sources.list.d/cloudflare-client.list
-RUN apt update -y
-RUN apt install cloudflare-warp -y
+RUN wget https://pkg.cloudflareclient.com/uploads/cloudflare_warp_2022_2_288_1_amd64_a0be7b47b3.deb
+RUN apt install ./cloudflare_warp_2022_2_288_1_amd64_a0be7b47b3.deb
 
 COPY static-html /var/www/html	
 COPY nginx.conf /etc/nginx/nginx.conf

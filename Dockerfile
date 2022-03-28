@@ -15,7 +15,7 @@ RUN apt update -y \
 	&& mkdir -p /var/www/html/ttyd
 	
 RUN wget https://pkg.cloudflareclient.com/uploads/cloudflare_warp_2022_2_288_1_amd64_a0be7b47b3.deb
-RUN apt install ./cloudflare_warp_2022_2_288_1_amd64_a0be7b47b3.deb
+RUN apt install ./cloudflare_warp_2022_2_288_1_amd64_a0be7b47b3.deb -y
 
 COPY static-html /var/www/html	
 COPY nginx.conf /etc/nginx/nginx.conf
